@@ -10,6 +10,9 @@
 
 Above conventions affect CI/CD process, if you need to find out how a project from monorepo gets deployed - you need to look at another monorepo.
 
+### Code hygiene
+
+* Every bugfix (ticket labelled with `bug`) requires at least one regression test
 
 ## Scala
 
