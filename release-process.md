@@ -103,6 +103,19 @@ git push --tags
 5. Only after you're sure that CI/CD was successful and asset is published, you can push the `master` branch: `git push origin master`. This will automatically close all tickets in the milestone. By pushing `master` branch last you're making sure that you won't have to force-push to `master` late because of broken CI/CD
 6. Push the release branch. It should automatically close the associated PR and mark it as "merged".
 
+### Final checklist
+
+1. If the code has not been reviewed yet, review it.
+2. Check that there is a 1:1:1 relationship between commit log, changelog file and issue tracker.
+3. Check that each component that has been updated in the PR has its version bumped, and that the commit for the bump is after the commits that updated it.
+4. In `Prepare for release commit`:
+    - In the `README.md` Check that `[release-image]` is updated with the new release.
+    - Chech that `VERSION` is updated (if there is one).
+
+### PR's reviewers
+
+There should be minimum 2 approval of reviewers before releasing.
+
 ### Post-release
 
 1. Close the GH milestone
