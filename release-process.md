@@ -74,9 +74,9 @@ https://github.com/snowplow/snowplow-scala-tracker/blob/master/CHANGELOG
 **NOTE**: in many cases, it is useful to have a dedicated `Release process` checklist somewhere in project's wiki, which can contain all steps (including QA, pre-release, release and post-release) that engineer need to go through before releasing as it can be highly individual. 
 
 3. Check that the copyright years are correct; if they are out of date - update them (this would go to a separate ticket - `Extend copyright notice to {{ year }}`
-**NOTE**: If you are uncertain about any of these steps look at the commit history for `Prepared for release` commits for reference.
+**NOTE**: If you are uncertain about any of these steps look at the commit history for `Prepare for release` commits for reference.
 
-4. Last commit is always `Prepare to release`, containing those small version bumps.
+4. Last commit is always `Prepare for release`, containing those small version bumps.
 
 5. After your project is ready for public QA and you need to release a pre-release asset - you bump the asset's version to `rc`/`M` (see [Version conventions][versioning]), commit it, tag and push:
 
@@ -96,7 +96,7 @@ git push --tags
 
 ### Release
 
-1. Remove all temporary commits (such as `Bump to Mx`). `Prepare to release` commit should be the `HEAD`
+1. Remove all temporary commits (such as `Bump to Mx`). `Prepare for release` commit should be the `HEAD`
 2. Merge the release branch to `master`: `git checkout master && git merge release/0.5.0` (we used to use `--no-ff` before, but getting away from this practice)
 3. Add a final tag (e.g. `0.5.0`) on top of the `master` branch
 4. Push tag-only: `git push --tags`
@@ -108,7 +108,7 @@ git push --tags
 1. If the code has not been reviewed yet, review it.
 2. Check that there is a 1:1:1 relationship between commit log, changelog file and issue tracker.
 3. Check that each component that has been updated in the PR has its version bumped, and that the commit for the bump is after the commits that updated it.
-4. In `Prepare for release commit`:
+4. In `Prepare for release` commit:
     - In the `README.md` Check that `[release-image]` is updated with the new release.
     - Chech that `VERSION` is updated (if there is one).
 
