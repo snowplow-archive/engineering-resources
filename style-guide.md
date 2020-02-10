@@ -1,5 +1,9 @@
 # Style Guide
 
+### Branching model
+
+Branching model is described in [Git Branching model][git-branching].
+
 ### Versioning conventions
 
 1. If project is in monorepo (`snowplow/snowplow`, `snowplow/snowplow-rdb-loader` etc), i.e. containing multiple projects that can be used separately, we used to refer to its milestones as to *releases* (e.g. `Release 32` or `R32`). We're trying to move away from monorepos
@@ -28,3 +32,4 @@ All Scala libraries and applications should follow practices outlined in our [Sc
 
 [scala-app-template]: https://github.com/snowplow/snowplow-scala-app.g8
 [scala-style-guide]: https://docs.scala-lang.org/style/
+[git-branching]: ./git-branching.md
