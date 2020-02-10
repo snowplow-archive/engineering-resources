@@ -13,6 +13,7 @@ The repo is also open to OSS contributors and should never include any private o
 ## Content
 
 * [Style Guide][style-guide] - general and language-specific practices and conventions
+* [Branching Model][git-branching] - git branching model
 * [Release Process][release-process] - software release process and checklist
 
 ## Revisions
@@ -21,4 +22,5 @@ This knowledge base is a subject of constant revision.
 In case any guides or conventions in this repository are unclear, ambigous or feel wrong, please address via PR or ticket in the repo.
 
 [style-guide]: https://github.com/snowplow-incubator/engineering-resources/blob/master/style-guide.md
+[git-branching]: https://github.com/snowplow-incubator/engineering-resources/blob/master/git-branching.md
 [release-process]: https://github.com/snowplow-incubator/engineering-resources/blob/master/release-process.md
