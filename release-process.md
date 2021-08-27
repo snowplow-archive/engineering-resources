@@ -20,7 +20,7 @@ Before starting to work on the release:
 
 3. Create and assign issues to this milestone for any and all changes that need to happen in this release
 
-**RULE**: Use an impretive case for ticket name (e.g. `Fix a race condition when multiple emitters used` - good, `Race condition bug when multiple emitters used` - bad)
+**RULE**: Use an imperative case for ticket name (e.g. `Fix a race condition when multiple emitters used` - good, `Race condition bug when multiple emitters used` - bad)
 
 ### Commit history
 
@@ -40,7 +40,7 @@ This way of committing the change means that when you merge changes to master th
 
 **RULE**: Always maintain the 1:1:1 relationship between commit log, changelog file and issue tracker.
 
-**NOTE**: Try to have as many details in ticket discussion as possible (but expose any details that can be internal!) - it makes code archeology a lot less painful process.
+**NOTE**: Try to have as many details in ticket discussion as possible (but don't expose any details that should stay internal!) - it makes code archeology a lot less painful process.
 
 ### Outside contributions
 
@@ -68,13 +68,13 @@ https://github.com/snowplow/snowplow-scala-tracker/blob/master/CHANGELOG
 
 2. Update any references to the release | version number to the current release, e.g. most common ones:
 
-* Badges in the README
-* Hardcoded versions in code
+- Badges in the README
+- Hardcoded versions in code
 
-**NOTE**: in many cases, it is useful to have a dedicated `Release process` checklist somewhere in project's wiki, which can contain all steps (including QA, pre-release, release and post-release) that engineer need to go through before releasing as it can be highly individual. 
+**NOTE**: in many cases, it is useful to have a dedicated `Release process` checklist somewhere in project's wiki, which can contain all steps (including QA, pre-release, release and post-release) that engineer need to go through before releasing as it can be highly individual.
 
 3. Check that the copyright years are correct; if they are out of date - update them (this would go to a separate ticket - `Extend copyright notice to {{ year }}`
-**NOTE**: If you are uncertain about any of these steps look at the commit history for `Prepare for release` commits for reference.
+   **NOTE**: If you are uncertain about any of these steps look at the commit history for `Prepare for release` commits for reference.
 
 4. Last commit is always `Prepare for release`, containing those small version bumps.
 
@@ -109,8 +109,8 @@ git push --tags
 2. Check that there is a 1:1:1 relationship between commit log, changelog file and issue tracker.
 3. Check that each component that has been updated in the PR has its version bumped, and that the commit for the bump is after the commits that updated it.
 4. In `Prepare for release` commit:
-    - In the `README.md` Check that `[release-image]` is updated with the new release.
-    - Chech that `VERSION` is updated (if there is one).
+   - In the `README.md` Check that `[release-image]` is updated with the new release.
+   - Chech that `VERSION` is updated (if there is one).
 
 ### PR's reviewers
 
@@ -127,9 +127,7 @@ There should be minimum 2 approval of reviewers before releasing.
 7. Update release page with links to the blog post and discourse announcement
 8. Follow the internal notifications process: announcement in `#releases` Slack channel, notify affected teams etc
 
-
 [versioning]: https://github.com/snowplow-incubator/engineering-resources/blob/master/style-guide.md
-
 [discourse]: http://discourse.snowplowanalytics.com/
 [blog-repo]: https://github.com/snowplow/snowplowanalytics.com
 [cla]: https://github.com/snowplow/snowplow/wiki/CLA
